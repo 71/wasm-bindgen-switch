@@ -4,7 +4,9 @@ Switch between a pure-Rust implementation and a `#[wasm_bindgen]`-backed
 implementation based on whether your code is compiled for WebAssembly.
 
 See [`tests/person.rs`](tests/person.rs) (which uses
-[`tests/person.js`](tests/person.js) in `wasm` builds) for an example.
+[`tests/person.js`](tests/person.js) in `wasm` builds) for an example. Both
+`cargo test` and `cargo test --target wasm32-unknown-unknown` test the same
+code and succeed.
 
 The goal is to be able to write Rust code that is used the exact same way, no
 matter the actual implementation (JS or Rust). Ideally, such a project would
